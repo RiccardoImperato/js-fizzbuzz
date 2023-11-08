@@ -13,23 +13,27 @@
 2. Applica stili differenti agli elementi creati, a seconda che il valore inserito sia numero, fizz, buzz o fizzbuzz
 */
 
-for ( let i = 1; i < 100; i++ ){
+for ( let i = 1; i < 101; i++ ){
     console.log(i);
-  const ul = document.querySelector('ul.list');
-  const li = document.createElement('li');
-  ul.append(li);
+    const ul = document.querySelector('ul.list');
+    const li = document.createElement('li');
+    ul.append(li);
+    li.classList.add('fs-4','text-black', 'p-3', 'm-3', 'square', 'number-bg', 'd-flex', 'justify-content-center', 'align-items-center' )
 
     if(i % 3 === 0 && i % 5 === 0){
         li.append('BuzzFizz');
+        li.classList.add('buzz-fizz');
         console.log('BuzzFizz');
     }
     else if (i % 3 === 0){
         li.append('Fizz');
-        console.log('Fizz')
+        li.classList.add('fizz');
+        console.log('Fizz');
     } 
     else if(i % 5 === 0){
         li.append('Buzz');
-        console.log('Buzz')
+        li.classList.add('buzz');
+        console.log('Buzz');
     }
     else {
     li.append(`${i}`);
