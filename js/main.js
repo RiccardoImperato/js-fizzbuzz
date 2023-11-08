@@ -8,16 +8,32 @@
 
 // 4. Per i numeri che sono sia multipli di 3 che di 5 stampa in console “FizzBuzz”
 
+/* Bonus
+1. Creo nel DOM un elemento html con il numero o la stringa corretta da mostrare
+2. Applica stili differenti agli elementi creati, a seconda che il valore inserito sia numero, fizz, buzz o fizzbuzz
+*/
+
 for ( let i = 1; i < 100; i++ ){
     console.log(i);
+  const ul = document.querySelector('ul.list');
+  const li = document.createElement('li');
+  ul.append(li);
+
     if(i % 3 === 0 && i % 5 === 0){
+        li.append('BuzzFizz');
         console.log('BuzzFizz');
     }
     else if (i % 3 === 0){
+        li.append('Fizz');
         console.log('Fizz')
     } 
     else if(i % 5 === 0){
+        li.append('Buzz');
         console.log('Buzz')
     }
- 
+    else {
+    li.append(`${i}`);
+
+    }
+
 }
